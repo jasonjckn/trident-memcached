@@ -38,7 +38,7 @@ public class MicroBatchIBackingMap<T> implements IBackingMap<T> {
         while(!keysTodo.isEmpty()) {
             List<List<Object>> keysBatch = new ArrayList<List<Object>>(thisBatchSize);
             List<T> valuesBatch = new ArrayList<T>(thisBatchSize);
-            for(int i=0; i<thisBatchSize; i++) {
+            for(int i=0; i<thisBatchSize && !keysTodo.isEmpty(); i++) {
                 keysBatch.add(keysTodo.removeFirst());
                 valuesBatch.add(valuesTodo.removeFirst());
             }
@@ -59,7 +59,7 @@ public class MicroBatchIBackingMap<T> implements IBackingMap<T> {
 
         while(!keysTodo.isEmpty()) {
             List<List<Object>> keysBatch = new ArrayList<List<Object>>(thisBatchSize);
-            for(int i=0; i<thisBatchSize; i++) {
+            for(int i=0; i<thisBatchSize && !keysTodo.isEmpty(); i++) {
                 keysBatch.add(keysTodo.removeFirst());
             }
 
