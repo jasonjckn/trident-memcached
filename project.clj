@@ -1,4 +1,4 @@
-(defproject storm/trident-memcached "0.0.5-wip2"
+(defproject storm/trident-memcached "0.0.6-experimental1"
   :source-paths ["src/clj"]
   :java-source-paths ["src/jvm"]
   :repositories {"twitter-maven" "http://maven.twttr.com/"}
